@@ -1,0 +1,128 @@
+.help {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 9;
+}
+.help__open {
+    width: 4rem;
+    height: 4rem;
+    background: var(--Third, rgb(20, 40, 65));
+    border-radius: 50%;
+    position: relative;
+    z-index: 3;
+    border: 0;
+    color: #fff;
+}
+.help__open::after {
+    content: "";
+    width: 1.7rem;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: 0;
+    transition: all .3s ease;
+}
+.help__open::before {
+    content: "";
+    width: 1.7rem;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    opacity: 0;
+    transition: all .3s ease;
+}
+.help__open .svg {
+    transition: all .3s ease;
+}
+.help__open .svg img {
+    width: 50%;
+}
+.help__open.open .svg {
+    opacity: 0;
+}
+.help__open.open::after {
+    opacity: 1;
+}
+.help__open.open::before {
+    opacity: 1;
+}
+.help__wrap {
+    width: 500px;
+    position: absolute;
+    top: 110px;
+    right: 0;
+    border-radius: var(--lg);
+    background: #1a1a1a;
+    padding: 1rem;
+    transition: all .3s ease;
+}
+.help__open.open + .help__wrap {
+    top: -500px;
+}
+.help__admin {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #000;
+    border-radius: var(--lg);
+}
+.help__admin .img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+.help__admin .name {
+    font-weight: var(--medium);
+    font-size: var(--lg);
+    line-height: var(--lg);
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #fff;
+}
+.help__admin .img img {
+    width: 100%;
+}
+.help__text {
+    height: 280px;
+    padding: 1rem 0;
+}
+.help__input {
+    display: flex;
+    min-height: 50px;
+    background: #000;
+    border-radius: var(--lg);
+}
+.help__input .input {
+    width: 100%;
+    padding: 0 1rem;
+    border: 0;
+    background: transparent;
+    color: #ddd;
+}
+.help__input .input::placeholder {
+    color: #ddd;
+}
+.help__input .btn {
+    background: transparent;
+    border: 0;
+    padding: 1rem;
+    color: #ddd;
+    transition: all .3s ease;
+}
+.help__input .btn:hover {
+    color: #fff;
+}

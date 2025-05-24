@@ -1,0 +1,57 @@
+.switch {
+position: relative;
+display: inline-block;
+min-width: 60px;
+width: 60px;
+height: 34px;
+margin-left: 1.2rem;
+}
+
+.switch input {
+display: none;
+}
+
+.sliderOffOn {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #000;
+transition: 0.4s;
+border-radius: 34px;
+}
+
+.sliderOffOn:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background: #fff url(../img/moon.svg) no-repeat center;
+background-size: 140%;
+transition: 0.4s;
+border-radius: 50%;
+}
+
+input:checked + .sliderOffOn {
+background-color: #fff;
+}
+
+input:checked + .sliderOffOn:before {
+transform: translateX(26px);
+background: #000 url(../img/soon.svg) no-repeat center;
+background-size: 90%;
+}
+
+.dark-mode {
+background-color: #121212;
+color: #f0f0f0;
+}
+
+#status {
+margin-top: 20px;
+font-size: 1.2em;
+}
